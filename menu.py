@@ -12,11 +12,10 @@ os.system("echo -e $(cat options.txt)")
 os.system("tput sgr0")
 #################
 
-#ch = int(input("Enter your choice: "))
-#print(ch)
+ch = int(input("Enter your choice: "))
+print(ch)
 
 
-ch =1
 
 def statusOP(op):
     os.system("tput bold")
@@ -92,13 +91,18 @@ elif ch == 13:
     print(op[1])
     statusOP(op[0])
 elif ch == 15:
-    svc = input("Enter the service name: ")
-    op = sp.getstatusoutput("systemctl start {0}".format(svc))
+    fp = input("Enter file path: ")
+    op = sp.getstatusoutput("cat {0}".format(fp))
     print(op[1])
     statusOP(op[0])
 elif ch == 16:
-    svc = input("Enter the service name: ")
-    op = sp.getstatusoutput("systemctl start {0}".format(svc))
+    #os.system("ping -c3 8.8.8.8")
+    op = sp.getstatusoutput("ping -c3 8.8.8.8")
+    print(op[1])
+    statusOP(op[0])
+elif ch == 17:
+    wb = input("Enter website name: ")
+    op = sp.getstatusoutput("nslookup {0}".format(wb))
     print(op[1])
     statusOP(op[0])
     

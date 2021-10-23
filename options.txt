@@ -1,6 +1,6 @@
 \n
-\t\t[ 1] - Date and Time\t\t[16] - Setup Docker tool\n
-\t\t[ 2] - Calendar\t\t\t[17] - Exit\n
+\t\t[ 1] - Date and Time\t\t[16] - Check connection\n
+\t\t[ 2] - Calendar\t\t\t[17] - Find IP of website \n
 \t\t[ 3] - IP Address\t\t[18] - Exit\n
 \t\t[ 4] - Route table\t\t[19] - Exit\n
 \t\t[ 5] - Socket Statistics\t[20] - Exit\n
