@@ -1,0 +1,21 @@
+\n
+\t\t[ 1] - Date and Time\t\t[16] - Setup Docker tool\n
+\t\t[ 2] - Calendar\t\t\t[17] - Exit\n
+\t\t[ 3] - IP Address\t\t[18] - Exit\n
+\t\t[ 4] - Route table\t\t[19] - Exit\n
+\t\t[ 5] - Socket Statistics\t[20] - Exit\n
+\t\t[ 6] - CPU configuration\t[21] - Exit\n
+\t\t[ 7] - List files\t\t[22] - Exit\n
+\t\t[ 8] - Memory Information\t[23] - Exit\n
+\t\t[ 9] - Time Pass\t\t[24] - Exit\n
+\t\t[10] - Transfer files\t\t[25] - Exit\n
+\t\t[11] - Run command on Remote\t[26] - Exit\n
+\t\t[12] - Start the services\t[27] - Exit\n
+\t\t[13] - Read file\t\t[28] - Exit\n
+\t\t[14] - Insert data in file\t[29] - Exit\n
+\t\t[15] - show data\t\t[30] - Exit\n
+\t\t-----------------------------------------------------\n
+\t\t[ 31 ] - Date and Time\t\t[  ] - Setup Docker tool\n
+\t\t[ 2] - Calendar\t\t\t[  ] - Exit\n
+\t\t[ 3] - IP Address\t\t[  ] - Exit\n
+\t\t[ 4] - Route table\t\t[  ] - Exit\n
