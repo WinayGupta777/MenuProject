@@ -1,0 +1,10 @@
+\n
+\t\t[ 1] - Compatibility Test\n
+\t\t[ 2] - List Containers\n
+\t\t[ 3] - List Images\n
+\t\t[ 4] - Pull image from DockerHub\n
+\t\t[ 5] - Launch Container\n
+\t\t[ 6] - Stop Container\n
+\t\t[ 7] - Remove Container\n
+\t\t[ 8] - Deploy WebServer\n
+\t\t[ 9] - Deploy ML model\n
