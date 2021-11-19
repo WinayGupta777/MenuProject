@@ -1,4 +1,4 @@
-import os
+import os,time
 import subprocess as sp
 
 print()
@@ -97,8 +97,8 @@ elif ch == 7:
         op = sp.getstatusoutput("docker rm -f ${docker ps -a -q}")
         print(op[1])
         statusOP(op[0])
-    stop = input("Enter Container's Name/ID: ")
-    op = sp.getstatusoutput(f"docker stop {stop}")
+    rm = input("Enter Container's Name/ID: ")
+    op = sp.getstatusoutput(f"docker rm {rm}")
     print(op[1])
     print("\n",statusOP(op[0]))
 
@@ -113,3 +113,17 @@ elif ch == 8:
         print(f"You get service from: http://{ip}:8080")
         print("Web Server deployed successfully")
         print("\n",statusOP(op[0]))
+
+elif ch == 9:
+    print()
+    fD = sp.getstatusoutput("gdown https://drive.google.com/uc?id=1tefDNWjx_VrdvWTq3Tc0ViAaXmlva5Ql")
+    print(f" · Fetching required files...  \t {statusOP(fD[0])}")
+    time.sleep(2)
+    bI = sp.getstatusoutput("docker build -t imgml .")
+    print(f" · Building fresh image...  \t {statusOP(bI[0])}")
+    time.sleep(2)
+    yr = input("\n   Enter experience(in yrs): ")
+    fD = sp.getstatusoutput(f"docker  run -it  imgml {yr}")
+    print(f" · Launching Container...  \t {statusOP(fD[0])}")
+    time.sleep(2)
+    print(fD[1])
