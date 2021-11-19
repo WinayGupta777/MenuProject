@@ -55,5 +55,29 @@ elif ch == 4:
     print()
     os.system(f"docker pull {nm}\n")
 
-elif ch == 4:
+elif ch == 5:
     print()
+    img = input("From which image? :")
+    e = input("Write ENV variable('N' if not) :")
+    v = input("Link storage('N' if not) :")
+    p = input("Enable PATing('N' if not) :")
+    nm = input("Enter name :")
+    if 'N' in e:
+        if 'N' in v:
+            if 'N' in p: 
+                sp.getstatusoutput(f"docker run -dit --name {nm} {img}")
+            else: 
+                sp.getstatusoutput(f"docker run -dit --name {nm} -p {p} {img}")
+        elif 'N' in p:
+            sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} {img}")
+        sp.getstatusoutput(f"docker run -dit --name {nm} -p {p} -v {v} {img}")
+    elif 'N' in v:
+        if 'N' in p:
+            sp.getstatusoutput(f"docker run -dit --name {nm} -e {e} {img}")
+        sp.getstatusoutput(f"docker run -dit --name {nm} -p {p} -e {e} {img}")
+    elif 'N' in p:
+        if 'N' in v:
+            sp.getstatusoutput(f"docker run -dit --name {nm}  -e {e} {img}")
+        sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} {img}")
+    else: sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} -p {p} {img}")
+            
