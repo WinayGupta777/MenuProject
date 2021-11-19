@@ -19,9 +19,9 @@ os.system("tput sgr0")
 
 def statusOP(op):
     if op == 0: 
-        return sp.getoutput("echo -e '\033[1;36m SUCCESS \033[0;0m'")
+        return sp.getoutput("echo -e '\033[1;36mSUCCESS \033[0;0m'")
     else: 
-        return sp.getoutput("echo -e '\033[1;31m ERROR \033[0;0m'")
+        return sp.getoutput("echo -e '\033[1;31mERROR \033[0;0m'")
 
 
 
@@ -42,12 +42,14 @@ elif ch == 2:
     os.system("echo -e '\033[1;33m\nAll containers:\033[0;0m'")
     da = sp.getstatusoutput('docker ps -a --format "{{.ID}}:: {{.Status}}\t :: {{.Names}}"')
     print(da[1])
+    print("\n",statusOP(da[0]))
 
 elif ch == 3:
     print()
     os.system("echo -e '\033[1;32mAll Images:\033[0;0m'")
     ac = sp.getstatusoutput("docker images")
     print(ac[1])
+    print("\n",statusOP(ac[0]))
     
 elif ch == 4:
     print()
@@ -80,4 +82,22 @@ elif ch == 5:
             sp.getstatusoutput(f"docker run -dit --name {nm}  -e {e} {img}")
         sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} {img}")
     else: sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} -p {p} {img}")
-            
+
+elif ch == 6:
+    print()
+    stop = input("Enter Container's Name/ID: ")
+    op = sp.getstatusoutput(f"docker stop {stop}")
+    print(op[1])
+    print("\n",statusOP(op[0]))
+
+elif ch == 7:
+    print()
+    ask = input("Remove all[y/n]: ")
+    if 'y' in ask:
+        op = sp.getstatusoutput("docker rm -f ${docker ps -a -q}")
+        print(op[1])
+        statusOP(op[0])
+    stop = input("Enter Container's Name/ID: ")
+    op = sp.getstatusoutput(f"docker stop {stop}")
+    print(op[1])
+    print("\n",statusOP(op[0]))
