@@ -101,3 +101,15 @@ elif ch == 7:
     op = sp.getstatusoutput(f"docker stop {stop}")
     print(op[1])
     print("\n",statusOP(op[0]))
+
+elif ch == 8:
+    print()
+    pl = sp.getstatusoutput("docker pull httpd")
+    r = sp.getstatusoutput("docker rm w1")
+    op = sp.getstatusoutput('docker run -dit --name w1 -p 8080:80 httpd')
+    if op[0]==0:
+        il = sp.getoutput("ifconfig  | grep -m4 'inet 19' | head -n 3")
+        ip = il.split(' ')[9]
+        print(f"You get service from: http://{ip}:8080")
+        print("Web Server deployed successfully")
+        print("\n",statusOP(op[0]))
