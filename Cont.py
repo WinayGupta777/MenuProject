@@ -49,3 +49,11 @@ elif ch == 3:
     ac = sp.getstatusoutput("docker images")
     print(ac[1])
     
+elif ch == 4:
+    print()
+    nm = input("Enter Image's Name[:TAG]: ")
+    print()
+    os.system(f"docker pull {nm}\n")
+
+elif ch == 4:
+    print()
