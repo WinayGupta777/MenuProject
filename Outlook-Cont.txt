@@ -8,4 +8,4 @@
 \t\t[ 7] - Remove Container\n
 \t\t[ 8] - Deploy WebServer\n
 \t\t[ 9] - Deploy ML model\n
-\t\t[ 10] - Return Back\n
+\t\t[10] - Return Back\n

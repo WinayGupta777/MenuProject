@@ -2,8 +2,8 @@ import os
 import subprocess as sp
 import time
 
-print()
 os.system("clear")
+print()
 os.system("tput bold setaf 0")
 os.system("cat Outlook.txt")
 os.system("tput sgr0")

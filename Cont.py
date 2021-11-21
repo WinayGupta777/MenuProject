@@ -2,6 +2,7 @@ import os,time
 import subprocess as sp
 
 while True:
+    os.system("clear")
     print()
     os.system("tput bold setaf 0")
     print("""
@@ -31,10 +32,10 @@ while True:
         yum = sp.getstatusoutput("yum install   docker-ce --nobest")
         svc = sp.getstatusoutput("systemctl  status  docker")
         print(" · Docker-ce is installed...\t {0}".format(statusOP(yum[0])))
-        #statusOP(yum[0])
+        time.sleep(1)
         print(" · Docker daemone running...\t {0}\n".format(statusOP(svc[0])))
-        #statusOP(svc[0])
-
+        time.sleep(1)
+        input("\nPress Enter to continue... ")
     elif ch == 2:
         print()
         os.system("echo -e '\033[1;32mActive containers:\033[0;0m'")
@@ -44,20 +45,20 @@ while True:
         da = sp.getstatusoutput('docker ps -a --format "{{.ID}}:: {{.Status}}\t :: {{.Names}}"')
         print(da[1])
         print("\n",statusOP(da[0]))
-
+        input("\nPress Enter to continue... ")
     elif ch == 3:
         print()
         os.system("echo -e '\033[1;32mAll Images:\033[0;0m'")
         ac = sp.getstatusoutput("docker images")
         print(ac[1])
         print("\n",statusOP(ac[0]))
-        
+        input("\nPress Enter to continue... ")        
     elif ch == 4:
         print()
         nm = input("Enter Image's Name[:TAG]: ")
         print()
         os.system(f"docker pull {nm}\n")
-
+        input("\nPress Enter to continue... ")
     elif ch == 5:
         print()
         img = input("From which image? :")
@@ -83,14 +84,14 @@ while True:
                 sp.getstatusoutput(f"docker run -dit --name {nm}  -e {e} {img}")
             sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} {img}")
         else: sp.getstatusoutput(f"docker run -dit --name {nm} -v {v} -e {e} -p {p} {img}")
-
+        input("\nPress Enter to continue... ")
     elif ch == 6:
         print()
         stop = input("Enter Container's Name/ID: ")
         op = sp.getstatusoutput(f"docker stop {stop}")
         print(op[1])
         print("\n",statusOP(op[0]))
-
+        input("\nPress Enter to continue... ")
     elif ch == 7:
         print()
         ask = input("Remove all[y/n]: ")
@@ -102,7 +103,7 @@ while True:
         op = sp.getstatusoutput(f"docker rm {rm}")
         print(op[1])
         print("\n",statusOP(op[0]))
-
+        input("\nPress Enter to continue... ")
     elif ch == 8:
         print()
         pl = sp.getstatusoutput("docker pull httpd")
@@ -114,7 +115,7 @@ while True:
             print(f"You get service from: http://{ip}:8080")
             print("Web Server deployed successfully")
             print("\n",statusOP(op[0]))
-
+        input("\nPress Enter to continue... ")
     elif ch == 9:
         print()
         fD = sp.getstatusoutput("gdown https://drive.google.com/uc?id=1tefDNWjx_VrdvWTq3Tc0ViAaXmlva5Ql")
@@ -128,9 +129,10 @@ while True:
         print(f" · Launching Container...  \t {statusOP(fD[0])}")
         time.sleep(2)
         print(fD[1])
+        input("\nPress Enter to continue... ")
     elif ch==10:
         break
-    
+
 print("\n\tRedirecting to 'Home Page' page ...")
 time.sleep(2)
 os.system("python3 New.py")
