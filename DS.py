@@ -103,3 +103,7 @@ while True:
             input("\nPress Enter to continue... ")
     elif ch==3:
         break
+
+print("\n\tRedirecting to 'Home Page' page ...")
+time.sleep(2)
+os.system("python3 New.py")
