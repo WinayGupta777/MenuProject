@@ -1,5 +1,6 @@
-############################
-#                          #
-#       Data Science       #
-#                          #
-############################
+\n
+\t\tCreate ML Model on-\n
+\t\t        │  \n
+\t\t        ├─ 1] - Linear Regression \n
+\t\t        │  \n
+\t\t        ├─ 2] - Logistic Regression \n

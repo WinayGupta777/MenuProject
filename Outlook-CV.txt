@@ -1,0 +1,5 @@
+\n
+\t\t[ 1] - Compatibility Test\n
+\t\t[ 2] - Click Picture\n
+\t\t[ 3] - Click Video\n
+\t\t[ 4] - Detect Live Face\n
