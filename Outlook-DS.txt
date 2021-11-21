@@ -3,4 +3,6 @@
 \t\t        │  \n
 \t\t        ├─ 1] - Linear Regression \n
 \t\t        │  \n
-\t\t        └─ 2] - Logistic Regression \n
+\t\t        ├─ 2] - Logistic Regression \n
+\t\t        │  \n
+\t\t        └─ 3] - Return Back\n
