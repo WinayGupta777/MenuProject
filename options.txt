@@ -1,21 +1,16 @@
 \n
-\t\t[ 1] - Date and Time\t\t[16] - Check connection\n
-\t\t[ 2] - Calendar\t\t\t[17] - Find IP of website \n
-\t\t[ 3] - IP Address\t\t[18] - Exit\n
-\t\t[ 4] - Route table\t\t[19] - Exit\n
-\t\t[ 5] - Socket Statistics\t[20] - Exit\n
-\t\t[ 6] - CPU configuration\t[21] - Exit\n
-\t\t[ 7] - List files\t\t[22] - Exit\n
-\t\t[ 8] - Memory Information\t[23] - Exit\n
-\t\t[ 9] - Time Pass\t\t[24] - Exit\n
-\t\t[10] - Transfer files\t\t[25] - Exit\n
-\t\t[11] - Run command on Remote\t[26] - Exit\n
-\t\t[12] - Start the services\t[27] - Exit\n
-\t\t[13] - Read file\t\t[28] - Exit\n
-\t\t[14] - Insert data in file\t[29] - Exit\n
-\t\t[15] - show data\t\t[30] - Exit\n
-\t\t-----------------------------------------------------\n
-\t\t[ 31 ] - Date and Time\t\t[  ] - Setup Docker tool\n
-\t\t[ 2] - Calendar\t\t\t[  ] - Exit\n
-\t\t[ 3] - IP Address\t\t[  ] - Exit\n
-\t\t[ 4] - Route table\t\t[  ] - Exit\n
+\t[ 1] - Date and Time\t\t[16] - Check connection\n
+\t[ 2] - Calendar\t\t\t[17] - Find IP of website \n
+\t[ 3] - IP Address\t\t[18] - Install Package\n
+\t[ 4] - Route table\t\t[19] - Find file\n
+\t[ 5] - Socket Statistics\t[20] - Make new user\n
+\t[ 6] - CPU configuration\t[21] - Launch Python REPL\n
+\t[ 7] - List files\t\t[22] - Call to Cow\n
+\t[ 8] - Memory Information\t[23] - Change Firewall mode\n
+\t[ 9] - Time Pass\t\t[24] - SCREEN-SAVER\n
+\t[10] - Transfer files\t\t[25] - List all partition\n
+\t[11] - Run command on Remote\t[26] - Make partition\n
+\t[12] - Start the services\t[27] - Remove partition\n
+\t[13] - Read file\t\t[28] - Test SElinux\n
+\t[14] - Insert data in file\t[29] - Change SElinux mode\n
+\t[15] - show data\t\t[30] - Return Back\n

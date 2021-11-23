@@ -1,0 +1,10 @@
+\n
+1] Configure Network (not recommanded)
+2] Configure YUM repository
+3] Debug SELinux
+4] Configure NTP
+5] AutoFS
+6] Cronjob
+
+7] 
+8]  
