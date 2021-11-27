@@ -24,7 +24,7 @@ while True:
     #################
 
     ch = int(input("Enter your choice: "))
-    print(ch)
+    print()
 
 
 
